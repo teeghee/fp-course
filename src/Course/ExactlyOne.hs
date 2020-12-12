@@ -10,6 +10,7 @@ import qualified Prelude as P
 
 data ExactlyOne a = ExactlyOne a deriving (Eq, Show)
 
+
 runExactlyOne :: ExactlyOne a -> a
 runExactlyOne (ExactlyOne a) = a
 
@@ -34,4 +35,3 @@ instance P.Monad ExactlyOne where
     flip bindExactlyOne
   return =
     ExactlyOne
-
